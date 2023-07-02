@@ -5,7 +5,7 @@ namespace LiteConfiguration;
 public class LiteConfigField
 {
     private string _fieldName;
-    private ValueTypes _valueType;
+    private FieldValueType _fieldValueType;
     private string _fieldComment;
     private object _value;
 
@@ -18,9 +18,9 @@ public class LiteConfigField
         string strValue = value.ToString();
         try
         {
-            switch (_valueType)
+            switch (_fieldValueType)
             {
-                case ValueTypes.Auto:
+                case FieldValueType.Auto:
                     if (Char.IsLetter(strValue[0]))
                     {
                         _value = strValue;
@@ -39,10 +39,10 @@ public class LiteConfigField
                     }
 
                     break;
-                case ValueTypes.String:
+                case FieldValueType.String:
                     _value = strValue;
                     break;
-                case ValueTypes.Number:
+                case FieldValueType.Number:
                     if (strValue.Contains('.')
                      || strValue.Contains(','))
                     {
@@ -54,7 +54,7 @@ public class LiteConfigField
                     }
 
                     break;
-                case ValueTypes.Guid:
+                case FieldValueType.Guid:
                     _value = Guid.Parse(strValue);
                     break;
             }
@@ -62,14 +62,14 @@ public class LiteConfigField
         catch (FormatException fex)
         {
             throw new FormatException(
-                $"LiteConfig Field {_fieldName} has an invalid Value: ${_value}. Expected Type ${_valueType}");
+                $"LiteConfig Field {_fieldName} has an invalid Value: ${_value}. Expected Type ${_fieldValueType}");
         }
     }
 
-    internal LiteConfigField (string fieldName, ValueTypes valueType, string fieldComment, object? defaultValue = null)
+    internal LiteConfigField (string fieldName, FieldValueType fieldValueType, string fieldComment, object? defaultValue = null)
     {
         _fieldName = fieldName;
-        _valueType = valueType;
+        _fieldValueType = fieldValueType;
         _fieldComment   = fieldComment;
         if (defaultValue is not null)
             SetValue(defaultValue);

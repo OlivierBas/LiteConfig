@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="media\lc.png" Pack="true" PackagePath="\"/>
+        <None Include="media\lc.png" Pack="true" PackagePath="\" />
     </ItemGroup>
     
 </Project>

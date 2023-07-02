@@ -7,7 +7,7 @@ namespace LiteConfiguration;
 public class LiteConfigFieldBuilder
 {
     private string _fieldName;
-    private ValueTypes _fieldType = ValueTypes.Auto;
+    private FieldValueType _fieldType = FieldValueType.Auto;
     private object? _defaultValue = null;
     private string _comment = string.Empty;
 
@@ -26,10 +26,10 @@ public class LiteConfigFieldBuilder
     /// <summary>
     /// The Value Type to parse from the Configuration Field's Value.
     /// </summary>
-    /// <param name="valueType">Type of Value to be parsed</param>
-    public LiteConfigFieldBuilder WithValueType (ValueTypes valueType)
+    /// <param name="fieldValueType">Type of Value to be parsed</param>
+    public LiteConfigFieldBuilder WithFieldType (FieldValueType fieldValueType)
     {
-        _fieldType = valueType;
+        _fieldType = fieldValueType;
         return this;
     }
 
