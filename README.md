@@ -1,5 +1,5 @@
 # LiteConfig
-![lc.png](media\lc.png)
+![lc.png](media/lc.png)
 
 Simple configuration library to easily set up configuration files for projects
 
@@ -19,7 +19,7 @@ var config = new LiteConfigBuilder()
 ```
 Generated result:
 
-![Generated result](\media\userlc.png)
+![Generated result](/media/userlc.png)
 
 Reading the value:
 ```cs
@@ -48,7 +48,7 @@ var config = new LiteConfigBuilder()
                     .Build();
 ```
 
-![media\img.png](\media\tokenlc.png)
+![media\img.png](/media/tokenlc.png)
 
 Reading the values:
 ```cs
