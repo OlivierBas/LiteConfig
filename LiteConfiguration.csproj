@@ -14,4 +14,8 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="media\lc.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
 </Project>
