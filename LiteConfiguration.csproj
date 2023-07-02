@@ -4,6 +4,14 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Lite Configuration</Title>
+        <Authors>OlivierBas</Authors>
+        <Description>Simple configuration library to easily set up configuration files for projects </Description>
+        <PackageProjectUrl>https://github.com/OlivierBas/LiteConfiguration</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/OlivierBas/LiteConfiguration/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageIcon>lc.png</PackageIcon>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
 </Project>
