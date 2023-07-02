@@ -7,7 +7,7 @@ Usage:
 
 ```cs
 var config = new LiteConfigBuilder()
-                    .UseConfig("user")
+                    .UseConfig("username")
                     .AddField(
                         new LiteConfigFieldBuilder()
                             .WithName("username")
